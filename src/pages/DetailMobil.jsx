@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import HeroSectionNoRent from "../components/HeroSectionNoRent";
+
 import MobilCard from "../images/innova.png"
 
+
 const DetailMobil = () => {
+  let {id} = useParams()
+  
+  const [detailCar, setDetailCar] = useState([])
+
+  function getDetailCar() {
+    try {
+          const requestOptions = {
+            method: 'GET',
+            headers: { 'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGJjci5pbyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTY2NTI0MjUwOX0.ZTx8L1MqJ4Az8KzoeYU2S614EQPnqk6Owv03PUSnkzc' }
+          };
+    
+        fetch(`https://bootcamp-rent-cars.herokuapp.com/customer/car/${id}`, requestOptions)
+         .then(resp => resp.json())
+         .then ((data) => {
+            console.log("hasil detail car " , data);
+            setDetailCar(data)
+         });
+    } catch (error){
+        console.log("Error", error.message);
+    }
+  }
+
+  useEffect(() => {
+    console.log("useEffect once terpanggil");
+    getDetailCar();
+  }, []);
+
     return( 
 <div>
     
@@ -90,10 +120,10 @@ const DetailMobil = () => {
   </div>
   <div className="justify-self-start">
         <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto mt-5">
-          <img className="w-full" src={MobilCard} alt="Product Image"></img>
+          <img className="w-full" src={detailCar.image} alt="Product Image"></img>
           <div className="px-6 py-4">
-            <p className="text-gray-700 font-bold text-xl mb-2">Product Description</p>
-            <div className=" text-sm mb-2">Product Title</div>
+            <p className="text-gray-700 font-bold text-xl mb-2">{detailCar.name}</p>
+            <div className=" text-sm mb-2">{detailCar.category}</div>
             <p className="text-gray-700 text-xs font-bold mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse consequatur facilis itaque ipsum nostrum obcaecati quis corporis, accusamus tenetur. Rerum?</p>
           </div>
           <div className="grid grid-cols-2 mt-8 gap-16 mx-auto mb-5">
@@ -101,7 +131,7 @@ const DetailMobil = () => {
                <p> Total </p>
             </div>
             <div className="justify-self-end mr-5 font-bold"> 
-              <p> Rp 500.000 </p>
+              <p> RP. {detailCar.price} </p>
             </div>
           </div>
         </div>
