@@ -3,7 +3,7 @@ import { BrowserRouter as Router,Routes, Route, Link } from "react-router-dom";
 import BinarCard from '../images/binarcar.png'
 
 
-const HeroSection = () => {
+const HeroSectionNoRent = () => {
     return (
      <div>
         < div className="bg-cover bg-[#F1F3FF]">
@@ -96,11 +96,9 @@ const HeroSection = () => {
                         <p className="mb-6 font-medium tracking-wide text-gray-600 dark:text-gray-400 md:text-lg">
                             Selamat datang di Binar car rental. Kami menyediakan mobil berkualitas terbaik dengan harga terjangkau.selalu melayani kebutuhanmu untuk sewa mobil selama 24 jam.
                         </p>
-                        <Link to={'/search'} >
-                        <p  className="inline-flex items-center justify-center px-8 py-3 text-gray-100 bg-green-600 rounded-md shadow hover:text-gray-100 hover:bg-green-500 ">
+                        {/* <a href="#" className="inline-flex items-center justify-center px-8 py-3 text-gray-100 bg-green-600 rounded-md shadow hover:text-gray-100 hover:bg-green-500 ">
                             Mulai Sewa Mobil
-                        </p>
-                        </Link>
+                        </a> */}
                     </div>
                     <div className="w-full px-4 md:w-1/2">
                         <div className="relative mx-auto md:mr-0 max-w-max">
@@ -125,4 +123,4 @@ const HeroSection = () => {
    
 };
 
-export default HeroSection;
+export default HeroSectionNoRent;

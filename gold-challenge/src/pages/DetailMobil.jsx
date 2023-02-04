@@ -1,13 +1,13 @@
 import React from "react";
 import Footer from "../components/Footer";
-import HeroSection from "../components/HeroSection";
+import HeroSectionNoRent from "../components/HeroSectionNoRent";
 import MobilCard from "../images/innova.png"
 
 const DetailMobil = () => {
     return( 
 <div>
     
-    <HeroSection />
+  <HeroSectionNoRent />
       
   <div className="grid grid-cols-2 mt-8 gap-16 mx-auto mb-5">
   <div className="w-[605px] h-[618px]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-self-end">
@@ -26,6 +26,7 @@ const DetailMobil = () => {
         <li className="ml-5"> Tidak termasuk akomodasi penginapan </li>
       </ul>
         <div  className="relative mt-5">
+        <span className="flex items-center w-full px-4 py-2 font-semibold text-black ml-1">Refund,Reschedule,Overtime </span>
             {/* <button
                 className="flex items-center w-full px-4 py-2 font-semibold text-black bg-white rounded dark:bg-white dark:focus:bg-white focus:bg-white focus:text-black focus:outline-none "
                 type="button">

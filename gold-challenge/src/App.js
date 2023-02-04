@@ -11,9 +11,9 @@ function App() {
     <Router>
     <Routes>
        <Route exact path='/' element = {<LandingPage />}></Route>
-       <Route exact path='/Search' element = {<SearchMobil />}></Route>
-       <Route exact path='/Listmobil' element = {<ListMobil />}></Route>
-       <Route exact path='/Detailmobil' element = {<DetailMobil />}></Route>
+       <Route exact path='/search' element = {<SearchMobil />}></Route>
+       <Route exact path='/listmobil' element = {<ListMobil />}></Route>
+       <Route exact path='/detailmobil' element = {<DetailMobil />}></Route>
        </Routes>
      <div>
        {/* <div className="bg-cover " >

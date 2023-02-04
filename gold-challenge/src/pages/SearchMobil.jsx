@@ -1,13 +1,15 @@
 import React from "react";
-import HeroSection from "../components/HeroSection";
+import HeroSectionNoRent from "../components/HeroSectionNoRent";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
+
 
 
 const SearchMobil = () => {
     return( 
 <div>
 
-   <HeroSection />
+   <HeroSectionNoRent />
       
   <div className="w-[1500px] border border-slate-200 h-24 bg-gray-50 mt-8 mx-auto mb-8">
   <div className="grid grid-cols-5 gap-4 my-auto">
@@ -120,7 +122,10 @@ const SearchMobil = () => {
       </div>
     </div>
     <div className="mt-8">
-      <a href="#" className="inline-flex items-center justify-center px-8 py-3 text-gray-100 bg-green-600 rounded-md shadow hover:text-gray-100 hover:bg-green-500 ">Cari Mobil</a>
+      <Link to={'/listmobil'} >
+      <p  className="inline-flex items-center justify-center px-8 py-3 text-gray-100 bg-green-600 rounded-md shadow hover:text-gray-100 hover:bg-green-500 ">Cari Mobil</p>
+      </Link>
+      
     </div>
   </div>
   </div>

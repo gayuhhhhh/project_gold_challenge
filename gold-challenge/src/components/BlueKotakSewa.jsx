@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -16,8 +17,10 @@ const BlueKotakSewa = () => {
       <p className="font-bold text-sm text-cyan-50">Lorem, ipsum dolor sit amet consectetur adipisicing elit, sed do elusmod tempor incidunt ut labore et dolore magna aliqua</p>
     </div>
     <div className="mx-auto px-8 py-3 w-48 bg-green-600 rounded-md shadow hover:text-gray-100 hover:bg-green-500 mt-20"> 
-      <a href="#"className="mx-auto  text-gray-100 ">
-      Mulai Sewa Mobil</a>
+    <Link to={'/search'} >
+      <p  className="mx-auto  text-gray-100 ">
+      Mulai Sewa Mobil</p>
+    </Link>
     </div>
    </div>
    
