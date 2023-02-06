@@ -48,41 +48,7 @@ const HeroSection = () => {
                     </div>
                 </nav>
             
-                <div className="fixed inset-0 w-full bg-gray-900 opacity-25 dark:bg-gray-400 lg:hidden">
-                </div>
-                <div className="absolute inset-0 z-40 h-screen p-3 text-gray-400 duration-500 transform bg-blue-50 dark:bg-gray-800 w-80 lg:hidden lg:transform-none lg:relative" >
-                    <div className="flex justify-between lg:">
-                        <a className="p-2 text-2xl font-bold text-gray-700 dark:text-gray-400" href="#">Binar Car Rental</a>
-                        <button className="p-2 text-gray-700 rounded-md dark:text-gray-400 hover:text-blue-300 lg:hidden ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                className="bi bi-x-circle" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                <path
-                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </button>
-                    </div>
-                    <ul className="px-4 text-left mt-7">
-                        <li className="pb-3">
-                            <a href="" className="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-100">Our Services</a>
-                        </li>
-                        <li className="pb-3">
-                            <a href="" className="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400">Why</a>
-                        </li>
-                        <li className="pb-3">
-                            <a href="" className="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400">Testimonials</a>
-                        </li>
-                        <li className="pb-3">
-                            <a href="" className="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400">FAQ</a>
-                        </li>
-                    </ul>
-                    <div className="block mt-5 lg:hidden">
-                        <a href=""
-                            className="inline-block w-full px-4 py-3 mr-2 text-xs font-semibold leading-none text-center text-gray-100 bg-blue-600 rounded-full dark:hover:bg-blue-400 dark:bg-blue-300 dark:text-gray-700 hover:bg-blue-700">
-                            Contact us
-                        </a>
-                    </div>
-                </div>
+                
             </div>
         </section>
         <div className="py-20 dark:bg-gray-700">
